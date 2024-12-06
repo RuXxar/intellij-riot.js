@@ -9,6 +9,7 @@ import intellij.riot.lang.RiotHtmlLanguage
 
 class RiotJSFrameworkSpecificHandlersFactory : JSFrameworkSpecificHandler {
 
+    @Deprecated("Use findExpectedType(parent: PsiElement, expectedTypeKind: JSExpectedTypeKind) instead", ReplaceWith("findExpectedType(parent, expectedTypeKind)"))
     override fun findExpectedType(parent: PsiElement, expectedTypeKind: JSExpectedTypeKind): JSType? {
         val containingFile = parent.containingFile
         if (containingFile.language !is RiotHtmlLanguage ||

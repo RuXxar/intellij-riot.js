@@ -16,8 +16,8 @@ class RiotJSLanguage : JSLanguageDialect("RiotJS", DialectOptionHolder.JS_WITHOU
         val INSTANCE = RiotJSLanguage()
     }
 
-    override fun getFileExtension(): String = "js"
-    override fun createParser(builder: PsiBuilder): JavaScriptParser<*, *, *, *> {
+    fun getFileExtension(): String = "js"
+    fun createParser(builder: PsiBuilder): JavaScriptParser<*, *, *, *> {
         return RiotJavaScriptLanguageParser(builder)
     }
 }
